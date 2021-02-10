@@ -5,7 +5,7 @@ import api from './service/Api'
 import Lista from './components/Lista';
 import ListaTwo from './components/ListaTwo';
 import { ScrollView } from 'react-native';
-import { ProdutosModel } from './components/model/ProdutosModel';
+import { ProdutosModel } from './model/ProdutosModel';
 
 export const Title = styled.Text`
   font-size: 24px;

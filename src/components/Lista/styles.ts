@@ -1,9 +1,17 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.TouchableOpacity`
+export const PrincipalContainer = styled.TouchableOpacity`
+    flex-direction: row;
+    border-color: black;
+    border-bottom-width: 1px;
+    border-bottom-color: #fff;
+`;
+
+export const Container = styled.View`
     flex-direction: row;
     padding: 8px;
     align-items: center;
+    width: 60%;
 `;
 
 export const NameProduct = styled.Text`
@@ -31,3 +39,26 @@ export const ContainerImage = styled.View`
 export const ContainerText = styled.View`
 
 `;
+
+export const ContainerPrice = styled.View`
+    align-items: flex-end;
+    width: 40%;
+    padding-right: 8px;
+    
+`;
+export const PriceProduct = styled.Text`
+    color: gray;
+    font-size: 10px;
+`;
+
+export const Discount = styled.Text`
+    color: black;
+`;
+
+export const DealPrice = styled.Text`
+    color: red;
+    font-size: 13px;
+`;
+
+
+
