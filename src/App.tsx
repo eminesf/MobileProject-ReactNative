@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components/native';
-import { getList } from './service/list'
 import api from './service/Api'
 
 import Lista from './components/Lista';
 import ListaTwo from './components/ListaTwo';
 import { ScrollView } from 'react-native';
-
-interface ProdutosModel {
-  id: number;
-  ean: number;
-  name: string;
-}
+import { ProdutosModel } from './components/model/ProdutosModel';
 
 export const Title = styled.Text`
   font-size: 24px;
@@ -26,19 +20,22 @@ const App = () => {
 
   const trazLista = async () => {
     await api.get('/items').then(items => { 
-      console.log(items.data);
       setList(items.data.payload);
     })
   }
 
 
+  // promisse
   useEffect(() => {
     trazLista()
   }, [])
 
 
   return (
-    <>
+    // componente pai não nomeado
+    // Scroll view serve para fazer a o roll da tela
+    // o ? como se fosse um elvis operator 
+    <>      
       <ScrollView>
         <Title>Lista 1</Title>
         {list?.map(item => (

@@ -1,16 +1,11 @@
 import React from 'react';
+import { ProdutosModel } from '../../model/ProdutosModel'
 
 import {
   Container,
   NameProduct,
   EanProduct
 } from './styles';
-
-interface ProdutosModel {
-  id: number;
-  ean: number;
-  name: string;
-}
 
 interface PageProps {
   itens: ProdutosModel[];

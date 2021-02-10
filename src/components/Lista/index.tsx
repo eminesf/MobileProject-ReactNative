@@ -1,25 +1,25 @@
 import React from 'react';
-import { 
-    Container, 
-    NameProduct, 
-    EanProduct 
+import {
+    Container,
+    NameProduct,
+    EanProduct,
+    ImageProduct,
+    ContainerImage, 
+    ContainerText
 } from './styles';
+import { PageProps } from '../../model/ProdutosModel'
 
-interface ProdutosModel {
-    id: number;
-    ean: number;
-    name: string;
-}
-
-interface PageProps {
-    item: ProdutosModel;
-}
 
 const Lista: React.FC<PageProps> = ({ item }: PageProps) => {
     return (
         <Container>
-            <EanProduct>{item.ean}</EanProduct>
-            <NameProduct>{item.name}</NameProduct>
+            <ContainerImage>
+                <ImageProduct source={{ uri: item?.images[0] }} />
+            </ContainerImage>
+            <ContainerText>
+                <EanProduct>{item?.ean}</EanProduct>
+                <NameProduct>{item?.name}</NameProduct>
+            </ContainerText>
         </Container>
     );
 }
