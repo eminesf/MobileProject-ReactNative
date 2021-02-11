@@ -1,4 +1,6 @@
 import styled from 'styled-components/native';
+import Icon from 'react-native-vector-icons/Feather';
+
 
 export const HeaderContainer = styled.View`
     flex-direction: row;
@@ -7,6 +9,7 @@ export const HeaderContainer = styled.View`
     height: 55px;
     margin-top: 24px;
     border-bottom-color: black;
+    
 `;
 
 export const TextContainer = styled.View`
@@ -23,17 +26,24 @@ export const TextHeader = styled.Text`
 `;
 
 export const ButtonBackContainer = styled.TouchableOpacity`
-    background-color: red;
+    justify-content: center;
     width: 15%;
     height: 100%;
 `;
 
-export const ButtonIcon = styled.Image``;
+export const ButtonIcon = styled(Icon)`
+    margin-left: 10px;
+`;
 
 export const CartContainer = styled.TouchableOpacity`
     width: 15%;
-    background-color: red;
     height: 100%;
+    align-items: center;
+    justify-content: center;
 `;
 
-export const CartIcon = styled.Image``;
+export const CartIcon = styled.Image`
+    width: 32px;
+    height: 32px;
+    
+`;

@@ -31,9 +31,9 @@ const Routes = () => {
                       },
                       headerTintColor: '#fff',
                       headerTitleStyle: {
-                        fontWeight: 'bold',
+                            fontWeight: 'bold',
                       },
-                      headerShown: true
+                      headerShown: false
                 })}
             />
         </App.Navigator>

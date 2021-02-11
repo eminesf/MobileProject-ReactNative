@@ -45,7 +45,7 @@ const PageDetails = () => {
 
     return (
         <>
-            <Header title={product?.name} />
+            <Header title={product?.name} showGoBack/>
             <ScrollView>
                 <ContainerImage>
                     <ImageProduct source={{ uri: product?.images[0] }} />

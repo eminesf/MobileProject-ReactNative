@@ -1,5 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { View } from 'react-native';
+import Icon from 'react-native-vector-icons/Feather';
+
+import imgCart from '../../assets/images/carrinhoCompra.png'
+
+
 
 import {
   ButtonBackContainer,
@@ -14,19 +19,24 @@ import {
 
 interface PageProps {
   title?: string;
+  showGoBack?: boolean;
 }
 
-const Header: React.FC<PageProps> = ({ title }: PageProps) => {
+const Header: React.FC<PageProps> = ({ title, showGoBack }: PageProps) => {
+
+  const { goBack } = useNavigation()
+
   return (
     <HeaderContainer>
-      <ButtonBackContainer>
-        <ButtonIcon></ButtonIcon>
+      <ButtonBackContainer onPress={goBack}>
+        {showGoBack && <ButtonIcon name="chevron-left" size={28} color="#FFF" />}
       </ButtonBackContainer>
       <TextContainer>
         <TextHeader>{title}</TextHeader>
       </TextContainer>
       <CartContainer>
-        <CartIcon></CartIcon>
+        {/* <CartIcon source={imgCart}></CartIcon> */}
+        <Icon name="shopping-cart" size={28} color="#FFF" />
       </CartContainer>
     </HeaderContainer>
   );
