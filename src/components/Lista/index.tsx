@@ -11,13 +11,15 @@ import {
     DealPrice,
     Discount,
     PrincipalContainer
-} from './styles';
+} from './stylesList';
 import { PageProps } from '../../model/ProdutosModel'
+import { useNavigation } from '@react-navigation/native';
 
 
 const Lista: React.FC<PageProps> = ({ item }: PageProps) => {
+    const { navigate } = useNavigation()
     return (
-        <PrincipalContainer>
+        <PrincipalContainer onPress={() => navigate('PageDetails', { id: item?.id, name: item?.name })}>
             <Container>
                 <ContainerImage>
                     <ImageProduct source={{ uri: item?.images[0] }} />
@@ -29,8 +31,8 @@ const Lista: React.FC<PageProps> = ({ item }: PageProps) => {
             </Container>
             <ContainerPrice>
                 <PriceProduct>Preço original: R${item?.price.originalPrice}</PriceProduct>
-                <Discount>Desconto: -{item?.price.percentage}%</Discount>
-                <DealPrice>Com desconto: R$ {item?.price.dealPrice}</DealPrice>
+                {item?.price.percentage && <Discount>Desconto: -{item?.price.percentage}%</Discount>}
+                {item?.price.dealPrice && <DealPrice>Com desconto: R$ {item?.price.dealPrice}</DealPrice>}
             </ContainerPrice>
         </PrincipalContainer>
     );

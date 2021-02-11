@@ -2,6 +2,8 @@ export interface ProdutosModel {
     id: number;
     ean: number;
     name: string;
+    ratingScore: number;
+    description: string;
     images: ImagemModel[];
     price: PriceModel;
 }
