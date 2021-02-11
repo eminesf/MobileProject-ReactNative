@@ -2,15 +2,15 @@ import 'react-native-gesture-handler';
 import React, { useState, useEffect } from 'react';
 import { useRoute } from '@react-navigation/native';
 import api from '../../service/Api'
-
 import { ScrollView, Text } from 'react-native';
+
 import { ProdutosModel } from '../../model/ProdutosModel';
+import Header from '../../components/Header';
 
 
 import {
+    ContainerImage,
     Container,
-    Header,
-    CartMarket,
     Title,
     ImageProduct,
     DescriptionProduct,
@@ -18,16 +18,16 @@ import {
     ContanerTitlePrice,
     PriceTitlePrice,
     ContainerPriceValor,
-    ContainerPrices
+    ContainerPrices,
+
 } from './styles';
 
 interface RouteParams {
     id: number;
-    
 }
 
 const PageDetails = () => {
-    const { params } =  useRoute();
+    const { params } = useRoute();
     const { id } = params as RouteParams;
     const [product, setProduct] = useState<ProdutosModel>();
 
@@ -45,12 +45,12 @@ const PageDetails = () => {
 
     return (
         <>
+            <Header title={product?.name} />
             <ScrollView>
-                <Header>
-                    <CartMarket></CartMarket>
-                </Header>
-                <Container>
+                <ContainerImage>
                     <ImageProduct source={{ uri: product?.images[0] }} />
+                </ContainerImage>
+                <Container>
                     <Title key={product?.id}>{product?.name}</Title>
                     <ContainerDescription>
                         <DescriptionProduct>{product?.description}</DescriptionProduct>

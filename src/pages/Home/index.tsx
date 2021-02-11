@@ -4,14 +4,12 @@ import { ScrollView } from 'react-native';
 import { ProdutosModel } from '../../model/ProdutosModel';
 import api from '../../service/Api';
 import Lista from '../../components/Lista';
+import Header from '../../components/Header';
 
-export const Title = styled.Text`
-  font-size: 24px;
-  background-color: gray;
-  padding: 16px;
-  color: #FFF;
-  text-align: center;
-`;
+import { 
+    HeaderText 
+} from './styles'
+
 
 
 const Home: React.FC = () => {
@@ -34,9 +32,9 @@ const Home: React.FC = () => {
         // Scroll view serve para fazer a o roll da tela
         // o ? como se fosse um elvis operator 
         <>
-            {/* <Header>Lista de Produtos</Header> */}
+            <Header title="Produtos">
+            </Header>
             <ScrollView>
-                <Title>Lista 1</Title>
                 {list?.map(item => (
                     <Lista key={item.id} item={item} />
                 ))}

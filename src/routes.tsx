@@ -33,6 +33,7 @@ const Routes = () => {
                       headerTitleStyle: {
                         fontWeight: 'bold',
                       },
+                      headerShown: true
                 })}
             />
         </App.Navigator>

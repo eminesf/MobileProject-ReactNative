@@ -1,29 +1,25 @@
 import styled from 'styled-components/native';
 
+export const ContainerImage = styled.View`
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+`;
+
+export const ImageProduct = styled.Image`
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+`;
+
 export const Container = styled.View`
   align-items: center;
-`;
-
-export const Header = styled.View`
-    height: 50px;
-    background-color: #97CBF0;
-`;
-
-export const CartMarket = styled.Image`
-    
 `;
 
 export const Title = styled.Text`
     align-self: center;
     font-size: 25px;
-`;
-
-export const ImageProduct = styled.Image`
-    margin-top: 20px;
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    background-color: #ddd;
 `;
 
 export const DescriptionProduct = styled.Text`
