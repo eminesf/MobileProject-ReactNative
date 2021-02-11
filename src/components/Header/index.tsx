@@ -2,19 +2,33 @@ import React from 'react';
 import { View } from 'react-native';
 
 import {
-  Container,
-  TextHeader
+  ButtonBackContainer,
+  HeaderContainer,
+  TextContainer,
+  TextHeader,
+  ButtonIcon,
+  CartContainer,
+  CartIcon
+
 } from './styles';
 
 interface PageProps {
   title?: string;
 }
 
-const Header: React.FC <PageProps> = ({ title }: PageProps) => {
+const Header: React.FC<PageProps> = ({ title }: PageProps) => {
   return (
-    <Container>
-      <TextHeader>{title}</TextHeader>
-    </Container>
+    <HeaderContainer>
+      <ButtonBackContainer>
+        <ButtonIcon></ButtonIcon>
+      </ButtonBackContainer>
+      <TextContainer>
+        <TextHeader>{title}</TextHeader>
+      </TextContainer>
+      <CartContainer>
+        <CartIcon></CartIcon>
+      </CartContainer>
+    </HeaderContainer>
   );
 }
 
