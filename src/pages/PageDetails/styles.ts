@@ -23,6 +23,8 @@ export const Title = styled.Text`
 `;
 
 export const DescriptionProduct = styled.Text`
+    font-size: 17px;
+    font-family: serif;
 `;
 
 export const ContainerDescription = styled.View`

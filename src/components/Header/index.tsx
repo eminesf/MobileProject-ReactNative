@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/Feather';
 
-import imgCart from '../../assets/images/carrinhoCompra.png'
+// import imgCart from '../../assets/images/carrinhoCompra.png'
 
 
 
@@ -12,9 +12,7 @@ import {
   TextContainer,
   TextHeader,
   ButtonIcon,
-  CartContainer,
-  CartIcon
-
+  CartContainer
 } from './styles';
 
 interface PageProps {
