@@ -10,7 +10,7 @@ const App = () => {
     <NavigationContainer>
       <StatusBar
         barStyle="light-content"
-        backgroundColor="#445"
+        backgroundColor="#f4511e"
         translucent
       />
       <Routes />

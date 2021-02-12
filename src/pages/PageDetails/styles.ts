@@ -1,4 +1,6 @@
 import styled from 'styled-components/native';
+import Icon from 'react-native-vector-icons/Feather';
+
 
 export const ContainerImage = styled.View`
     justify-content: center;
@@ -49,4 +51,51 @@ export const ContainerPrices = styled.View`
     width: 50%;
     margin-left: 10px;
 `;
+
+
+export const TotalPriceContainer = styled.View`
+    margin: 10px;
+    align-items: center;
+`;
+export const TotalPriceView = styled.Text`
+    color: black;
+    font-size: 28px;
+`;
+
+export const TotalProductsContainer = styled.View`
+    margin: 10px;
+    flex-direction: row;
+    height: 65px;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const AddProductContainer = styled.TouchableOpacity`
+    align-items: center;
+    justify-content: center;
+    margin-right: 15%;
+    height: 100%;
+    width: 90px;
+    
+`;
+export const AddProductIcon = styled(Icon)``;
+
+export const TotalProductContainerText = styled.View`
+    align-items: center;
+    justify-content: center;
+`;
+
+export const TotalProductsText = styled.Text`
+    color: black;
+    font-size: 50px;
+`;
+
+export const RemoveProductContainer = styled.TouchableOpacity`
+align-items: center;
+    justify-content: center;
+    margin-left: 15%;
+    height: 100%;
+    width: 90px;
+`;
+export const RemoveProductIcon = styled(Icon)``;
 

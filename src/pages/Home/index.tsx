@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components/native';
 import { ScrollView } from 'react-native';
 import { ProdutosModel } from '../../model/ProdutosModel';
 import api from '../../service/Api';
