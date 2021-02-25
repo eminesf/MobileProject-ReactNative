@@ -11,7 +11,7 @@ import {
     DealPrice,
     Discount,
     PrincipalContainer
-} from './stylesList';
+} from './styles';
 import { PageProps } from '../../model/ProdutosModel'
 import { useNavigation } from '@react-navigation/native';
 
