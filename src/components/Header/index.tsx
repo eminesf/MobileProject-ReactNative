@@ -33,7 +33,6 @@ const Header: React.FC<PageProps> = ({ title, showGoBack }: PageProps) => {
         <TextHeader>{title}</TextHeader>
       </TextContainer>
       <CartContainer>
-        {/* <CartIcon source={imgCart}></CartIcon> */}
         <Icon name="shopping-cart" size={28} color="#FFF" />
       </CartContainer>
     </HeaderContainer>

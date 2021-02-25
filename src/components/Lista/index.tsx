@@ -17,6 +17,16 @@ import { useNavigation } from '@react-navigation/native';
 
 
 const Lista: React.FC<PageProps> = ({ item }: PageProps) => {
+    const pencentage = item?.price.percentage;
+    const originalPrice = item?.price.originalPrice;
+    let finalPrice: any;
+    if(pencentage == null){
+        finalPrice = originalPrice;
+    } else {
+        finalPrice = (1 - (pencentage / 100)) * originalPrice;
+    }
+    
+
     const { navigate } = useNavigation()
     return (
         <PrincipalContainer onPress={() => navigate('PageDetails', { id: item?.id, name: item?.name })}>
@@ -27,12 +37,12 @@ const Lista: React.FC<PageProps> = ({ item }: PageProps) => {
                 <ContainerText>
                     <EanProduct>{item?.ean}</EanProduct>
                     <NameProduct>{item?.name}</NameProduct>
+                    <PriceProduct>Preço original: R${originalPrice}</PriceProduct>
                 </ContainerText>
             </Container>
             <ContainerPrice>
-                <PriceProduct>Preço original: R${item?.price.originalPrice}</PriceProduct>
-                {item?.price.percentage && <Discount>Desconto: -{item?.price.percentage}%</Discount>}
-                {item?.price.dealPrice && <DealPrice>Com desconto: R$ {item?.price.dealPrice}</DealPrice>}
+                {item?.price.percentage && <Discount>Desconto: -{pencentage}%</Discount>}
+                <DealPrice>Preço final: R$ {finalPrice.toFixed(2)}</DealPrice>
             </ContainerPrice>
         </PrincipalContainer>
     );

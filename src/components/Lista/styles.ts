@@ -2,9 +2,11 @@ import styled from 'styled-components/native';
 
 export const PrincipalContainer = styled.TouchableOpacity`
     flex-direction: row;
-    border-color: black;
+    height: 100px;
     border-bottom-width: 1px;
-    border-bottom-color: #fff;
+    border: #ddd;
+    background-color: #fff;
+
 `;
 
 export const Container = styled.View`
@@ -21,13 +23,13 @@ export const NameProduct = styled.Text`
 
 export const EanProduct = styled.Text`
     font-weight: bold;
-    font-size: 10px;
+    font-size: 9px;
     color: gray;
 `;
 
 export const ImageProduct = styled.Image`
-    width: 48px;
-    height: 48px;
+    width: 59px;
+    height: 59px;
     border-radius: 28px;
     background-color: #ddd;
     margin-right: 10px;
@@ -44,6 +46,7 @@ export const ContainerPrice = styled.View`
     align-items: flex-end;
     width: 40%;
     padding-right: 8px;
+    justify-content: center;
     
 `;
 export const PriceProduct = styled.Text`
