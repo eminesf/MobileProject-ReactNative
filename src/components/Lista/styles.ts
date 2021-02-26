@@ -3,10 +3,11 @@ import styled from 'styled-components/native';
 export const PrincipalContainer = styled.TouchableOpacity`
     flex-direction: row;
     height: 100px;
+    border-top-width: 1px;
     border-bottom-width: 1px;
     border: #ddd;
     background-color: #fff;
-
+    border-radius: 15px;
 `;
 
 export const Container = styled.View`
